@@ -25,5 +25,12 @@ def find_key():
 def ignite_torch():
     return "torch ignite success"
 
+def action():
+    return "correct action needed"
+
+def activate_rescue_beacon():
+    return "success message and welcome messages and options"
+
+
 
 
