@@ -9,3 +9,17 @@ PLAYER_STATE = {
     "score": 0
 }
 
+MAIN_MENU ="""
+    ################################################
+    #                                              #
+    #          MYSTERY ISLAND ADVENTURE            #
+    #                                              #
+    #              THE LOST TRAVELLER              #
+    #                                              #
+    ################################################
+
+                  [  PRESS ENTER  ]
+
+             >>> YOUR ADVENTURE BEGINS <<<
+    """
+

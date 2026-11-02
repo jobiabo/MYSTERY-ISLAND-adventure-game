@@ -1,17 +1,8 @@
-def main_menu():
-    print("""
-    ################################################
-    #                                              #
-    #          MYSTERY ISLAND ADVENTURE            #
-    #                                              #
-    #              THE LOST TRAVELLER              #
-    #                                              #
-    ################################################
+from effects import typewriter
+import config
 
-                  [  PRESS ENTER  ]
-
-             >>> YOUR ADVENTURE BEGINS <<<
-    """)
+def main_menu(): 
+    return typewriter(config.MAIN_MENU)
 
 def start_message():
     pass
