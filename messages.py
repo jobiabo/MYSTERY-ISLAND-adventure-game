@@ -13,3 +13,8 @@ def in_jungle():
 def hollow_embrace():
     return "lost message"
 
+def predators_trials():
+    return "beast fight message and options to beat the beast, gets the rope"
+
+
+
