@@ -16,5 +16,14 @@ def hollow_embrace():
 def predators_trials():
     return "beast fight message and options to beat the beast, gets the rope"
 
+def old_bridge():
+    return "old bridge message and guide options to use rope"
+
+def find_key():
+    return "found key value"
+
+def ignite_torch():
+    return "torch ignite success"
+
 
 
