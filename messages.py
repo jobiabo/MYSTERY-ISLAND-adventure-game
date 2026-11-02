@@ -1,5 +1,17 @@
 def main_menu():
-    pass
+    print("""
+    ################################################
+    #                                              #
+    #          MYSTERY ISLAND ADVENTURE            #
+    #                                              #
+    #              THE LOST TRAVELLER              #
+    #                                              #
+    ################################################
+
+                  [  PRESS ENTER  ]
+
+             >>> YOUR ADVENTURE BEGINS <<<
+    """)
 
 def start_message():
     pass

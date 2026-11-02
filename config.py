@@ -8,3 +8,4 @@ PLAYER_STATE = {
     "has_lantern": False,
     "score": 0
 }
+
