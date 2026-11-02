@@ -1,36 +1,41 @@
-def menu():
-    return "main_menu"
+def main_menu():
+    pass
 
-def start_mess():
-    return "game startup message"
+def start_message():
+    pass
 
 def find_map():
-    return "map option and selected option"
+    pass
 
-def in_jungle():
-    return "welcome to the jungle message and option selected for paths"
+def jungle_welcome():
+    pass
+
+def jungle_path_selection():
+    pass
 
 def hollow_embrace():
-    return "lost message"
+    pass
 
-def predators_trials():
-    return "beast fight message and options to beat the beast, gets the rope"
+def predator_trial():
+    pass
 
-def old_bridge():
-    return "old bridge message and guide options to use rope"
+def old_bridge_welcome():
+    pass
+
+def old_bridge_puzzle():
+    pass
+
+def lighthouse_welcome():
+    pass
 
 def find_key():
-    return "found key value"
+    pass
 
 def ignite_torch():
-    return "torch ignite success"
+    pass
 
-def action():
-    return "correct action needed"
+def select_door_action():
+    pass
 
 def activate_rescue_beacon():
-    return "success message and welcome messages and options"
-
-
-
-
+    pass
