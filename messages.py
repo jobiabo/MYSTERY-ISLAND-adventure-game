@@ -9,22 +9,28 @@ def start_game():
 
 def find_map():
     print(config.THE_LOST_MAP)
-    choice = input("Enter choice either 1 or the text").strip().lower()
+    choice = input("Enter choice either 1 or the text: ").strip().lower()
     if choice == "1" or "drowned secrets":
         print("""The map was soaked up before you reached it
         You died after few minutes on the island due to hunger
-        you lost""")
+        YOU LOST!!!""")
         
 
     if choice == "2" or "treacherous steps":
-        pass
+        print("""You slipped on the ground due to uncertainty and died
+        YOU LOST!!!""")
+
+
     if choice == "3" or "sealed fortune":
-        pass
+        print("Congratulations, You have Successfully secured the map")
+        jungle_welcome()
+
+
     else:
-        print("invalid input, please enter a valid choice")
+        print("Enter valid opt")
 
 def jungle_welcome():
-    pass
+    print("Jungle responded")
 
 def jungle_path_selection():
     pass
