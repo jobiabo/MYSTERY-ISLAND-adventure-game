@@ -57,7 +57,7 @@ def jungle_welcome():
         # Check if the player succeeded
         if success:
             # Next Phase
-            hollow_embrace()
+            predator_trial_welcome()
             return
 
         # Check if the player has run out of energy
@@ -84,16 +84,27 @@ def jungle_welcome():
 
 
 
-def jungle_path_selection():
-    print("")
+def jungle_path_selection(energy_tracker):
+    print("""YOUR NEXT CHALLENGE: CHOOSE YOUR PATH!
+            Two directions. Two different dangers. One chance to move forward.
+            
+            LEFT: The Hollow's Embrace : A silent path conceals a potentially deadly secret.
+            RIGHT: The Predator's Trial: Something dangerous may be waiting among the shadows.
+            Choose wisely. Your survival depends on it.""")
     while True:
-        choice = input("Choose path:")
+        choice = input("Choose path: ").strip().lower()
+        if choice == "1" or choice == "left" or choice == "hollow embrace":
+            hollow_embrace()
+            energy_tracker -= 1
+            return energy_tracker, False
+        elif choice == "2" or choice == "right" or choice == "the Predator's trial":
+            return energy_tracker, True
 
 def hollow_embrace():
-    print(config.HOLLOW_EMBRACE)
+    return config.HOLLOW_EMBRACE
  
-def predator_trial():
-    pass
+def predator_trial_welcome():
+    print("Predator trials responded")
 
 def old_bridge_welcome():
     pass
