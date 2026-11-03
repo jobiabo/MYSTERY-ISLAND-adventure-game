@@ -88,3 +88,56 @@ Three choices lie before you. Choose wisely, because your decision will determin
 3. Sealed Fortune: Seize what the storm left behind.
 Make your choice and let fate decide your next move!"""
 
+PHASE_JUNGLE = """🌴 PHASE II: THE HEART OF THE JUNGLE
+Chapter 2: Into the Unknown
+Congratulations, traveller! You have secured the mysterious map!
+
+With the map safely in your possession, you finally have a sense of direction. You carefully examine its faded markings and discover a route leading away from the beach and deep into the island's dense jungle.
+
+You gather your strength and begin your journey.
+
+As you approach the jungle, towering trees surround you, their branches blocking out most of the sunlight. Strange sounds echo through the wilderness. Birds scatter overhead, leaves rustle mysteriously, and unfamiliar creatures seem to be watching your every move.
+
+The deeper you venture, the narrower the pathway becomes.
+
+After walking for some time, you arrive at a junction where the path splits into two directions: LEFT and RIGHT.
+
+You pause and examine both routes.
+
+The left path appears quiet, but something about the ground seems unusual. The right path disappears into thick vegetation, where strange noises emerge from the shadows.
+
+Your map offers no clear explanation of what lies ahead.
+
+Remember, traveller: the jungle holds many secrets, but not every path leads to safety. Your next decision could determine whether you survive or become another forgotten mystery of the island.
+
+YOUR NEXT CHALLENGE: CHOOSE YOUR PATH!
+Two directions. Two different dangers. One chance to move forward.
+
+LEFT: The Hollow's Embrace : A silent path conceals a potentially deadly secret.
+RIGHT: The Predator's Trial: Something dangerous may be waiting among the shadows.
+Choose wisely. Your survival depends on it.
+
+The jungle awaits..."""
+
+
+
+
+HOLLOW_EMBRACE = """💀 THE HOLLOW'S EMBRACE – FATAL MISTAKE!
+
+You take the left path, hoping to find a safer route through the jungle.
+
+Suddenly, the ground beneath your feet collapses!
+
+CRACK!
+
+You fall into a deep, hidden ditch and cannot escape.
+
+Your journey ends here.
+
+YOU FAILED!
+
+⚠️ SURVIVAL FEEDBACK
+
+Not every quiet path is safe, traveller. Always observe your surroundings before making decisions.
+
+Lesson learned: Never mistake silence for safety!"""

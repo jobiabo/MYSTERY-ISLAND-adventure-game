@@ -32,18 +32,66 @@ def find_map(energy_tracker):
 
         else:
             print("Invalid option! Please try again.")
-            continue
+            energy_tracker -= 1
+            return energy_tracker, False
+        
 
 
 def jungle_welcome():
-    print("Jungle responded")
+    print(config.PHASE_JUNGLE)
+
+    print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
+    print("ENERGY LEVEL BOOSTED!!!")
+
+    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(input("PRESS ENTER TO CHOOSE YOUR PATH: "))
+
+    energy_tracker = 5
+    
+    while energy_tracker > 0:
+
+        energy_tracker, success = jungle_path_selection(energy_tracker)
+
+        print(f"ENERGY REMAINING: {energy_tracker}/5")
+
+        # Check if the player succeeded
+        if success:
+            # Next Phase
+            hollow_embrace()
+            return
+
+        # Check if the player has run out of energy
+        if energy_tracker <= 0:
+            print("YOU HAVE RUN OUT OF ENERGY!")
+            print("GAME OVER!")
+            return
+
+        # Ask whether the player wants to retry
+        retry = input(
+            "Would you like to try again? (yes/no): ").strip().lower()
+
+        if retry == "yes":
+            print("You gather your strength and try again...")
+            continue
+        
+        elif retry == "no":
+            print("You have chosen to give up.")
+            print("GAME OVER!")
+            return
+
+        else:
+            print("Invalid response! Please enter yes or no.")
+
+
 
 def jungle_path_selection():
-    pass
+    print("")
+    while True:
+        choice = input("Choose path:")
 
 def hollow_embrace():
-    pass
-
+    print(config.HOLLOW_EMBRACE)
+ 
 def predator_trial():
     pass
 

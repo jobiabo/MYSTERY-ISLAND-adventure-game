@@ -20,6 +20,10 @@ def main():
     while energy_tracker > 0:
 
         energy_tracker, success = find_map(energy_tracker)
+        from config import PLAYER_STATE
+        PLAYER_STATE["health"] = energy_tracker
+        
+        
 
         print(f"ENERGY REMAINING: {energy_tracker}/5")
 
