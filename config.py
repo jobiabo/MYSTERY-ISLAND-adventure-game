@@ -141,3 +141,27 @@ YOU FAILED!
 Not every quiet path is safe, traveller. Always observe your surroundings before making decisions.
 
 Lesson learned: Never mistake silence for safety!"""
+
+
+PREDATOR_WELCOME = """THE PREDATOR'S TRIAL: FACE THE BEAST!
+                    Congratulations, traveller! You have chosen the right path and ventured deeper into the jungle.
+                    
+                    Suddenly, bushes begin to shake, and a terrifying roar echoes through the trees!
+                    
+                    A fierce beast emerges from the shadows, blocking your way. Before you can escape, it launches an attack!
+                    
+                    But there is hope. You notice that the beast's movements follow certain patterns.
+                    
+                    ⚔️ YOUR CHALLENGE: SURVIVE THE ATTACK!
+                    The beast will strike, and you must prove your quick thinking and survival instincts.
+                    
+                    Instructions:
+                    
+                    Scrambled words will appear on your screen.
+                    Rearrange the letters to form the correct survival or combat action.
+                    Enter the correct word to dodge or counter the beast's attack.
+                    Incorrect answers will cost you energy.
+                    Survive the encounter and defeat the beast to earn a rope as your reward!
+                    Remember, traveller: Think fast, act wisely and fight for your survival!
+                    
+                    The predator is watching. Are you ready?"""
