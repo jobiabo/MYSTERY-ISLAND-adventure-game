@@ -111,15 +111,21 @@ def predator_trial_welcome():
     print("""The beast launches a powerful strike towards you!
             Quick! Unscramble the words to dodge its attack and survive!""")
     
-    userinput1 = input("OGDED: ")
+    userinput1 = input("OGDED: ").strip().upper()
     _dodged.append(userinput1)
-    userinput2 = input("VOME: ")
+    userinput2 = input("VOME: ").strip().upper()
     _dodged.append(userinput2)
 
     print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
-    userinput3 = input("TATKAC: ")
+    userinput3 = input("TATKAC: ").strip().upper()
     _attack.append(userinput3)
-    userinput4 = input("KICSTRE: ")
+    userinput4 = input("KICSTRE: ").strip().upper()
+    _attack.append(userinput4)
+    userinput5 = input("ASHLS: ").strip().upper()
+    _attack.append(userinput5)
+
+    print(_dodged)
+    print(_attack)
     
 
 
