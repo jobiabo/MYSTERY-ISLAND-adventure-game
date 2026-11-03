@@ -4,8 +4,8 @@ import config
 def main_menu(): 
     return typewriter(config.MAIN_MENU)
 
-def start_message():
-    pass
+def start_game():
+    return typewriter(config.START_MESSAGE)
 
 def find_map():
     pass
