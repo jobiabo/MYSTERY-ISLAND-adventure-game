@@ -7,27 +7,32 @@ def main_menu():
 def start_game():
     return typewriter(config.START_MESSAGE)
 
-def find_map():
+def find_map(energy_tracker):
     print(config.THE_LOST_MAP)
-    choice = input("Enter choice either 1 or the text: ").strip().lower()
-    if choice == "1" or "drowned secrets":
-        print("""The map was soaked up before you reached it
-        You died after few minutes on the island due to hunger
-        YOU LOST!!!""")
-        
 
-    if choice == "2" or "treacherous steps":
-        print("""You slipped on the ground due to uncertainty and died
-        YOU LOST!!!""")
+    while True:
+        choice = input("Enter your choice: ").strip().lower()
 
+        if choice == "1" or choice == "drowned secrets":
+            print("The map was washed away!")
+            print("You lost 1 energy point.")
+            energy_tracker -= 1
+            return energy_tracker, False
 
-    if choice == "3" or "sealed fortune":
-        print("Congratulations, You have Successfully secured the map")
-        jungle_welcome()
+        elif choice == "2" or choice == "treacherous steps":
+            print("You slipped on the unstable ground!")
+            print("You lost 1 energy point.")
+            energy_tracker -= 1
+            return energy_tracker, False
 
+        elif choice == "3" or choice == "sealed fortune":
+            print("Congratulations! You secured the map.")
+            return energy_tracker, True
 
-    else:
-        print("Enter valid opt")
+        else:
+            print("Invalid option! Please try again.")
+            continue
+
 
 def jungle_welcome():
     print("Jungle responded")
