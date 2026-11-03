@@ -72,3 +72,5 @@ You must act quickly!
 Will you reach the map in time, risk slipping on the wet sand, or manage to secure it safely?
 
 Your adventure begins now. Good luck, traveller!"""
+
+
