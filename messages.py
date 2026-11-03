@@ -7,6 +7,7 @@ def main_menu():
 def start_game():
     return typewriter(config.START_MESSAGE)
 
+
 def find_map(energy_tracker):
     print(config.THE_LOST_MAP)
 
