@@ -1,4 +1,4 @@
-from messages import main_menu
+from messages import main_menu, find_map
 from config import GAME_INTRO, START_MESSAGE
 from effects import typewriter
 
@@ -10,7 +10,6 @@ def main():
     input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
     typewriter(GAME_INTRO)
     typewriter(input("PRESS ENTER OR ANY KEY TO BEGIN ADVENTURE: "))
-
-    
+    find_map()
 
 main()

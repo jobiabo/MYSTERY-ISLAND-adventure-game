@@ -74,3 +74,17 @@ Will you reach the map in time, risk slipping on the wet sand, or manage to secu
 Your adventure begins now. Good luck, traveller!"""
 
 
+THE_LOST_MAP = """THE FADING MAP: A RACE AGAINST THE TIDE!
+As you reach for the old parchment, a sudden wave rushes towards the shore!
+
+The map is lying dangerously close to the water. You have only a few moments to save it before the ocean swallows its secrets.
+
+What will you do, traveller?
+
+Three choices lie before you. Choose wisely, because your decision will determine your fate!
+
+1. Drowned Secrets: Let the waters decide.
+2. Treacherous Steps: Trust the uncertain ground.
+3. Sealed Fortune: Seize what the storm left behind.
+Make your choice and let fate decide your next move!"""
+
