@@ -104,7 +104,24 @@ def hollow_embrace():
     return config.HOLLOW_EMBRACE
  
 def predator_trial_welcome():
-    print("Predator trials responded")
+    print(config.PREDATOR_WELCOME)
+    print("PRESS ENTER TO ENGAGE: ")
+    _dodged = []
+    _attack = []
+    print("""The beast launches a powerful strike towards you!
+            Quick! Unscramble the words to dodge its attack and survive!""")
+    
+    userinput1 = input("OGDED: ")
+    _dodged.append(userinput1)
+    userinput2 = input("VOME: ")
+    _dodged.append(userinput2)
+
+    print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
+    userinput3 = input("TATKAC: ")
+    _attack.append(userinput3)
+    userinput4 = input("KICSTRE: ")
+    
+
 
 def old_bridge_welcome():
     pass
