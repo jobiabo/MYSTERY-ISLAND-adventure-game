@@ -241,34 +241,77 @@ LIGHT_HOUSE_WELCOME = """🏚️ PHASE IV: THE ABANDONED LIGHTHOUSE Chapter 4: T
 
 FIND_KEY_PUZZLE = """🔑 THE FORGOTTEN KEY – A TEST OF SURVIVAL!
 
-As you approach the abandoned lighthouse, something shiny catches your attention in the overgrown grass.
+                        As you approach the abandoned lighthouse, something shiny catches your attention in the overgrown grass.
 
-You move closer and discover an old, rusted key lying on the ground.
+                        You move closer and discover an old, rusted key lying on the ground.
 
-It might be the key to unlocking the lighthouse door!
+                        It might be the key to unlocking the lighthouse door!
 
-However, something feels unusual about the area. The grass is thick, and you cannot clearly see what might be hiding beneath it.
+                        However, something feels unusual about the area. The grass is thick, and you cannot clearly see what might be hiding beneath it.
 
-You must decide how to retrieve the key.
+                        You must decide how to retrieve the key.
 
-YOUR CHALLENGE: CHOOSE WISELY!
+                        YOUR CHALLENGE: CHOOSE WISELY!
 
-1. The Silent Guardian 
-2. The Brittle Relic 
-3. The Keeper's Fortune
+                        1. The Silent Guardian 
+                        2. The Brittle Relic 
+                        3. The Keeper's Fortune
 
-Choose wisely, traveller. Your next decision could determine your fate!"""
+                        Choose wisely, traveller. Your next decision could determine your fate!"""
 
 FIND_KEY_SUCCESS = """🔑 THE KEEPER'S FORTUNE – KEY SECURED!
 
                         Excellent work, traveller!
-                        
+
                         You carefully inspect the grass and successfully retrieve the old rusted key without disturbing anything dangerous.
-                        
+
                         You now have the key that could unlock the abandoned lighthouse.
-                        
+
                         With hope renewed, you approach the massive lighthouse door, ready to discover what lies beyond.
-                        
+
                         🏆 CHALLENGE COMPLETED!
-                        
+
                         Your journey continues..."""
+
+IGNITE_TORCH_WELCOME = """🔥 PHASE V: THE TORCH OF HOPE Chapter 5: A Light in the Darkness
+
+                            Congratulations, traveller! You have successfully unlocked the lighthouse door and stepped inside.
+
+                            The interior is dark, dusty and covered in cobwebs. As you explore the abandoned room, you discover a wooden stick and an old container of gas.
+
+                            Perhaps these items can help you create a torch!
+
+                            You realise that the lighthouse is still dark, and without light, finding the rescue equipment will be difficult.
+
+                            YOUR NEXT CHALLENGE: IGNITE THE TORCH!
+
+                            You must solve five scrambled-word challenges related to the items and actions needed to light your torch.
+
+                            Instructions:
+
+                            Five scrambled words will appear on your screen.
+                            Rearrange the letters to form the correct words.
+                            Enter each correct answer to progress.
+                            Solve all five challenges to successfully ignite your torch.
+
+                            Remember, traveller: The darkness is your enemy, but a little light could bring you closer to freedom.
+
+                            Are you ready to light the way to rescue?"""
+
+IGNITE_TORCH_SUCCESS = """🔥 THE TORCH OF HOPE – SUCCESSFULLY IGNITED!
+
+                            Excellent work, traveller!
+                            
+                            You successfully assembled the torch and ignited it using the gas.
+                            
+                            A bright flame bursts to life, illuminating the dark lighthouse interior.
+                            
+                            As you raise the torch, you notice an old control room with a large emergency light system.
+                            
+                            Could this be your chance to signal for rescue?
+                            
+                            🏆 CHALLENGE COMPLETED!
+                            
+                            You are one step closer to escaping Mystery Island!
+                            
+                            Your final challenge awaits..."""
