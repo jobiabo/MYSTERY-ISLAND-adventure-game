@@ -259,12 +259,68 @@ def old_bridge_puzzle(energy_tracker):
 
 
 def lighthouse_welcome():
-    pass
+    print(config.LIGHT_HOUSE_WELCOME)
+    print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
+    print("ENERGY LEVEL BOOSTED!!!")
 
-def find_key():
-    pass
+    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
-def ignite_torch():
+    energy_tracker = 5
+    
+    while energy_tracker > 0:
+
+        energy_tracker, success = find_key(energy_tracker)
+
+        print(f"ENERGY REMAINING: {energy_tracker}/5")
+
+        # Check if the player succeeded
+        if success:
+            # Next Phase: IGNITE TORCH INTRO
+            ignite_torch_welcome()
+            return
+
+        # Check if the player has run out of energy
+        if energy_tracker <= 0:
+            print("YOU HAVE RUN OUT OF ENERGY!")
+            print("GAME OVER!")
+            return
+
+        # Ask whether the player wants to retry
+        retry = input(
+            "Would you like to try again? (yes/no): ").strip().lower()
+
+        if retry == "yes":
+            print("You gather your strength and try again...")
+            continue
+        
+        elif retry == "no":
+            print("You have chosen to give up.")
+            print("GAME OVER!")
+            return
+
+        else:
+            print("Invalid response! Please enter yes or no.")
+    
+
+def find_key(energy_tracker):
+    print(config.FIND_KEY_PUZZLE)
+    userinput = input("Enter choice here: ").strip().lower()
+    if userinput == "1" or userinput == "the silent guardian":
+        energy_tracker -= 1
+        return energy_tracker, False
+    elif userinput == "2" or userinput == "the brittle relic":
+        energy_tracker -= 1
+        return energy_tracker, False
+
+    elif userinput == "3" or userinput == "the keeper's fortune":
+        return energy_tracker, True
+    else:
+        print("invalid input enter option 1 or 2 or 3")
+        energy_tracker -= 1
+        return energy_tracker, False
+
+def ignite_torch_welcome():
     pass
 
 def select_door_action():

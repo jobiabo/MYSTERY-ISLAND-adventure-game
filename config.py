@@ -196,21 +196,79 @@ OLD_BRIDGE_WELCOME = """🌉 PHASE III: THE ANCIENT BRIDGE Chapter 3: The Forgot
 BRIDGE_SUCCESS = """🎉 THE ANCIENT BRIDGE – SUCCESSFUL CROSSING!
 
                     Excellent work, traveller!
-                    
+
                     You successfully secured the rope and operated the ancient mechanism.
-                    
+
                     With a loud creaking sound, the rusted wheel begins to turn, and the ancient bridge slowly lowers into position.
-                    
+
                     At last, the path across is clear!
-                    
+
                     You carefully cross the bridge and continue your journey deeper into the mysterious island.
-                    
+
                     🏆 CHALLENGE COMPLETED!
-                    
+
                     ⚠️ SURVIVAL FEEDBACK
-                    
+
                     Well done! Your patience and problem-solving skills have helped you overcome another obstacle.
-                    
+
                     Remember, traveller: Sometimes survival requires more than strength; it requires intelligence and resourcefulness.
-                    
+
                     Your adventure continues..."""
+
+LIGHT_HOUSE_WELCOME = """🏚️ PHASE IV: THE ABANDONED LIGHTHOUSE Chapter 4: The Key to Survival
+
+                        Congratulations, traveller! You have successfully crossed the ancient bridge!
+                        
+                        Following the markings on your map, you continue exploring the island until you discover an old lighthouse standing near the rocky coastline.
+                        
+                        It looks abandoned, with broken windows, rusty walls and overgrown grass surrounding its entrance.
+                        
+                        As you approach, something catches your attention. Half-hidden in the grass is an old, rusted key.
+                        
+                        Could this be the key to unlocking the lighthouse?
+                        
+                        You carefully examine your surroundings, but the island has taught you that danger can hide in unexpected places.
+                        
+                        YOUR NEXT CHALLENGE: FIND THE KEY!
+                        
+                        You must make the right decision to retrieve and keep the mysterious key.
+                        
+                        Three choices lie ahead, but not all of them will lead to success.
+                        
+                        Remember, traveller: Every decision matters, and one careless move could end your journey.
+                        
+                        The lighthouse holds the secret to your escape. Are you ready to discover it?"""
+
+FIND_KEY_PUZZLE = """🔑 THE FORGOTTEN KEY – A TEST OF SURVIVAL!
+
+As you approach the abandoned lighthouse, something shiny catches your attention in the overgrown grass.
+
+You move closer and discover an old, rusted key lying on the ground.
+
+It might be the key to unlocking the lighthouse door!
+
+However, something feels unusual about the area. The grass is thick, and you cannot clearly see what might be hiding beneath it.
+
+You must decide how to retrieve the key.
+
+YOUR CHALLENGE: CHOOSE WISELY!
+
+1. The Silent Guardian 
+2. The Brittle Relic 
+3. The Keeper's Fortune
+
+Choose wisely, traveller. Your next decision could determine your fate!"""
+
+FIND_KEY_SUCCESS = """🔑 THE KEEPER'S FORTUNE – KEY SECURED!
+
+                        Excellent work, traveller!
+                        
+                        You carefully inspect the grass and successfully retrieve the old rusted key without disturbing anything dangerous.
+                        
+                        You now have the key that could unlock the abandoned lighthouse.
+                        
+                        With hope renewed, you approach the massive lighthouse door, ready to discover what lies beyond.
+                        
+                        🏆 CHALLENGE COMPLETED!
+                        
+                        Your journey continues..."""
