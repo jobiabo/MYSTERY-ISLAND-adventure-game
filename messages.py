@@ -1,15 +1,14 @@
 from effects import typewriter
-import config
-
+from config import get_main_menu, get_start_message, get_the_lost_map, get_phase_jungle, get_player_health, get_predator_welcome, get_hollow_embrace, get_old_bridge_welcome, get_bridge_success, get_light_house_welcome, get_find_key_puzzle, get_find_key_success, get_ignite_torch_welcome, get_ignite_torch_success, get_jammed_door_welcome, get_jammed_door_success, get_rescue_beacon_welcome, get_rescue_beacon_success
 def main_menu(): 
-    return typewriter(config.MAIN_MENU)
+    return typewriter(get_main_menu())
 
 def start_game():
-    return typewriter(config.START_MESSAGE)
+    return typewriter(get_start_message())
 
 
 def find_map(energy_tracker):
-    print(config.THE_LOST_MAP)
+    print(get_the_lost_map())
 
     while True:
         choice = input("Enter your choice: ").strip().lower()
@@ -38,12 +37,12 @@ def find_map(energy_tracker):
 
 
 def jungle_welcome():
-    print(config.PHASE_JUNGLE)
+    print(get_phase_jungle())
 
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CHOOSE YOUR PATH: "))
 
     energy_tracker = 5
@@ -101,16 +100,16 @@ def jungle_path_selection(energy_tracker):
             return energy_tracker, True
 
 def hollow_embrace():
-    return config.HOLLOW_EMBRACE
+    return get_hollow_embrace()
 
 
  
 def predator_trial_welcome():
-    print(config.PREDATOR_WELCOME)
+    print(get_predator_welcome())
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
     energy_tracker = 5
@@ -195,11 +194,11 @@ def predator_engage(energy_tracker):
 
 
 def old_bridge_welcome():
-    print(config.OLD_BRIDGE_WELCOME)
+    print(get_old_bridge_welcome())
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
     energy_tracker = 5
@@ -250,7 +249,7 @@ def old_bridge_puzzle(energy_tracker):
     user_list.append(userinput3)
 
     if user_list == sys_list:
-        print(config.BRIDGE_SUCCESS)
+        print(get_bridge_success())
         return energy_tracker, True
     else:
         energy_tracker-=1
@@ -259,11 +258,11 @@ def old_bridge_puzzle(energy_tracker):
 
 
 def lighthouse_welcome():
-    print(config.LIGHT_HOUSE_WELCOME)
+    print(get_light_house_welcome())
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
     energy_tracker = 5
@@ -304,7 +303,7 @@ def lighthouse_welcome():
     
 
 def find_key(energy_tracker):
-    print(config.FIND_KEY_PUZZLE)
+    print(get_find_key_puzzle())
     userinput = input("Enter choice here: ").strip().lower()
     if userinput == "1" or userinput == "the silent guardian":
         energy_tracker -= 1
@@ -314,7 +313,7 @@ def find_key(energy_tracker):
         return energy_tracker, False
 
     elif userinput == "3" or userinput == "the keeper's fortune":
-        print(config.FIND_KEY_SUCCESS)
+        print(get_find_key_success())
         return energy_tracker, True
     else:
         print("invalid input enter option 1 or 2 or 3")
@@ -322,12 +321,12 @@ def find_key(energy_tracker):
         return energy_tracker, False
 
 def ignite_torch_welcome():
-    print(config.IGNITE_TORCH_WELCOME)
+    print(get_ignite_torch_welcome())
 
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
     energy_tracker = 5
@@ -383,7 +382,7 @@ def ignite_touch_puzzle(energy_tracker):
     user_data.append(input_V)
 
     if user_data == sys_data:
-        print(config.IGNITE_TORCH_SUCCESS)
+        print(get_ignite_torch_success())
         return energy_tracker, True
     else:
         energy_tracker-=1
@@ -391,12 +390,12 @@ def ignite_touch_puzzle(energy_tracker):
 
 
 def jam_door_welcome():
-    print(config.JAMMED_DOOR_WELCOME)
+    print(get_jammed_door_welcome())
 
     print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
     print("ENERGY LEVEL BOOSTED!!!")
 
-    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(f"Health: ", get_player_health())
     print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
 
     energy_tracker = 5
@@ -450,13 +449,13 @@ def jam_door_action(energy_tracker):
     user_data.append(input_III)
 
     if user_data == sys_data:
-        print(config.JAMMED_DOOR_SUCCESS)
+        print(get_jammed_door_success())
         return energy_tracker, True
     else:
         energy_tracker-=1
         return energy_tracker, False
 
 def activate_rescue_beacon():
-    print(config.RESCUE_BEACON_WELCOME)
+    print(get_rescue_beacon_welcome())
     input("PRESS ENTER TO ACTIVATE THE RESCUE BEACON...")
-    print(config.RESCUE_BEACON_SUCCESS)
+    print(get_rescue_beacon_success())

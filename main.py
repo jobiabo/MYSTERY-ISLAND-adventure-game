@@ -1,18 +1,18 @@
-from messages import main_menu, find_map, jungle_welcome
-from config import GAME_INTRO, START_MESSAGE, player_signup
+from messages import get_main_menu, find_map, get_phase_jungle
+from config import get_game_intro, get_start_message, player_signup
 from effects import typewriter
 
 
 
 def main():
     player_signup()
-    main_menu()
+    get_main_menu()
 
     input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
-    typewriter(START_MESSAGE)
+    typewriter(get_start_message())
 
     input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
-    typewriter(GAME_INTRO)
+    typewriter(get_game_intro())
 
     input("PRESS ENTER TO BEGIN ADVENTURE: ")
     
@@ -33,7 +33,7 @@ def main():
         # Check if the player succeeded
         # Next Phase: JUNGLE WELCOME
         if success:
-            jungle_welcome()
+            get_phase_jungle()
             return
 
         # Check if the player has run out of energy

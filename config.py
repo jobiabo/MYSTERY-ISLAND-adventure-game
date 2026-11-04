@@ -9,19 +9,12 @@ PLAYER_STATE = {
     "highest_score": 0
 }
 
+def get_player_health():
+    return PLAYER_STATE["health"]
+
 def player_signup():
     PLAYER_STATE["player_name"] = input("Enter your Nick name: ").strip().lower()
 
-PLAYER_STATE = {
-    "player_name": "",
-    "health": 5,
-    "has_map": False,
-    "current_location": "beach",
-    "puzzle_solved": False,
-    "has_rope": False,
-    "has_lantern": False,
-    "highest_score": 0
-}
 
 def get_main_menu():
     return f"""
