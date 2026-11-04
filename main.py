@@ -1,10 +1,11 @@
-from messages import main_menu, find_map, jungle_welcome, predator_trial_welcome
-from config import GAME_INTRO, START_MESSAGE
+from messages import main_menu, find_map, jungle_welcome
+from config import GAME_INTRO, START_MESSAGE, player_signup
 from effects import typewriter
 
 
 
 def main():
+    player_signup()
     main_menu()
 
     input("PRESS ENTER OR ANY KEY TO CONTINUE: ")

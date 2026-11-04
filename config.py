@@ -6,25 +6,41 @@ PLAYER_STATE = {
     "puzzle_solved": False,
     "has_rope": False,
     "has_lantern": False,
-    "score": 0
+    "highest_score": 0
 }
 
-MAIN_MENU ="""
+def player_signup():
+    PLAYER_STATE["player_name"] = input("Enter your Nick name: ").strip().lower()
+
+PLAYER_STATE = {
+    "player_name": "",
+    "health": 5,
+    "has_map": False,
+    "current_location": "beach",
+    "puzzle_solved": False,
+    "has_rope": False,
+    "has_lantern": False,
+    "highest_score": 0
+}
+
+def get_main_menu():
+    return f"""
     ################################################
     #                                              #
     #          MYSTERY ISLAND ADVENTURE            #
     #                                              #
-    #              THE LOST TRAVELLER              #
+    #              THE LOST  TRAVELLER             #
     #                                              #
     ################################################
 
                   [  PRESS ENTER  ]
 
-             >>> YOUR ADVENTURE BEGINS <<<
+               >>> YOUR ADVENTURE BEGINS <<<
     """
 
 
-START_MESSAGE = """Welcome, brave traveller!
+def get_start_message():
+    return f"""Welcome,  {PLAYER_STATE["player_name"]}!
 
 Are you ready to test your courage, intelligence and survival instincts? Welcome to Mystery Island, an adventure where every decision matters, every clue hides a secret, and one wrong move could cost you everything.
 
@@ -40,7 +56,9 @@ Solve scrambled-word challenges to overcome obstacles.
 Make wise decisions because every choice has consequences.
 Do you have what it takes to escape Mystery Island?"""
 
-GAME_INTRO = """STORY MODE: THE BEGINNING
+
+def get_game_intro():
+    return f"""STORY MODE: THE BEGINNING
 Chapter 1: The Awakening
 Crash!
 
@@ -71,15 +89,16 @@ You must act quickly!
 
 Will you reach the map in time, risk slipping on the wet sand, or manage to secure it safely?
 
-Your adventure begins now. Good luck, traveller!"""
+Your adventure begins now. Good luck,  {PLAYER_STATE["player_name"]}!"""
 
 
-THE_LOST_MAP = """THE FADING MAP: A RACE AGAINST THE TIDE!
+def get_the_lost_map():
+    return f"""THE FADING MAP: A RACE AGAINST THE TIDE!
 As you reach for the old parchment, a sudden wave rushes towards the shore!
 
 The map is lying dangerously close to the water. You have only a few moments to save it before the ocean swallows its secrets.
 
-What will you do, traveller?
+What will you do,  {PLAYER_STATE["player_name"]}?
 
 Three choices lie before you. Choose wisely, because your decision will determine your fate!
 
@@ -88,9 +107,11 @@ Three choices lie before you. Choose wisely, because your decision will determin
 3. Sealed Fortune: Seize what the storm left behind.
 Make your choice and let fate decide your next move!"""
 
-PHASE_JUNGLE = """🌴 PHASE II: THE HEART OF THE JUNGLE
+
+def get_phase_jungle():
+    return f"""🌴 PHASE II: THE HEART OF THE JUNGLE
 Chapter 2: Into the Unknown
-Congratulations, traveller! You have secured the mysterious map!
+Congratulations,  {PLAYER_STATE["player_name"]}! You have secured the mysterious map!
 
 With the map safely in your possession, you finally have a sense of direction. You carefully examine its faded markings and discover a route leading away from the beach and deep into the island's dense jungle.
 
@@ -108,7 +129,7 @@ The left path appears quiet, but something about the ground seems unusual. The r
 
 Your map offers no clear explanation of what lies ahead.
 
-Remember, traveller: the jungle holds many secrets, but not every path leads to safety. Your next decision could determine whether you survive or become another forgotten mystery of the island.
+Remember,  {PLAYER_STATE["player_name"]}: the jungle holds many secrets, but not every path leads to safety. Your next decision could determine whether you survive or become another forgotten mystery of the island.
 
 YOUR NEXT CHALLENGE: CHOOSE YOUR PATH!
 Two directions. Two different dangers. One chance to move forward.
@@ -120,9 +141,8 @@ Choose wisely. Your survival depends on it.
 The jungle awaits..."""
 
 
-
-
-HOLLOW_EMBRACE = """💀 THE HOLLOW'S EMBRACE – FATAL MISTAKE!
+def get_hollow_embrace():
+    return f"""💀 THE HOLLOW'S EMBRACE – FATAL MISTAKE!
 
 You take the left path, hoping to find a safer route through the jungle.
 
@@ -138,13 +158,14 @@ YOU FAILED!
 
 ⚠️ SURVIVAL FEEDBACK
 
-Not every quiet path is safe, traveller. Always observe your surroundings before making decisions.
+Not every quiet path is safe,  {PLAYER_STATE["player_name"]}. Always observe your surroundings before making decisions.
 
 Lesson learned: Never mistake silence for safety!"""
 
 
-PREDATOR_WELCOME = """THE PREDATOR'S TRIAL: FACE THE BEAST!
-                    Congratulations, traveller! You have chosen the right path and ventured deeper into the jungle.
+def get_predator_welcome():
+    return f"""THE PREDATOR'S TRIAL: FACE THE BEAST!
+                    Congratulations,  {PLAYER_STATE["player_name"]}! You have chosen the right path and ventured deeper into the jungle.
                     
                     Suddenly, bushes begin to shake, and a terrifying roar echoes through the trees!
                     
@@ -162,13 +183,15 @@ PREDATOR_WELCOME = """THE PREDATOR'S TRIAL: FACE THE BEAST!
                     Enter the correct word to dodge or counter the beast's attack.
                     Incorrect answers will cost you energy.
                     Survive the encounter and defeat the beast to earn a rope as your reward!
-                    Remember, traveller: Think fast, act wisely and fight for your survival!
+                    Remember,  {PLAYER_STATE["player_name"]}: Think fast, act wisely and fight for your survival!
                     
                     The predator is watching. Are you ready?"""
 
-OLD_BRIDGE_WELCOME = """🌉 PHASE III: THE ANCIENT BRIDGE Chapter 3: The Forgotten Crossing
 
-                        Congratulations, traveller! You have defeated the beast and secured the rope!
+def get_old_bridge_welcome():
+    return f"""🌉 PHASE III: THE ANCIENT BRIDGE Chapter 3: The Forgotten Crossing
+
+                        Congratulations,  {PLAYER_STATE["player_name"]}! You have defeated the beast and secured the rope!
                         
                         Following the route marked on your map, you venture deeper into the island until you encounter an enormous ancient bridge.
                         
@@ -189,13 +212,15 @@ OLD_BRIDGE_WELCOME = """🌉 PHASE III: THE ANCIENT BRIDGE Chapter 3: The Forgot
                         Each correct answer helps you operate the bridge mechanism.
                         Solve all three challenges to lower the bridge and continue your journey.
                         
-                        Be careful, traveller! One wrong move could leave you stranded.
+                        Be careful,  {PLAYER_STATE["player_name"]}! One wrong move could leave you stranded.
                         
                         The ancient bridge awaits. Are you ready to cross?"""
 
-BRIDGE_SUCCESS = """🎉 THE ANCIENT BRIDGE – SUCCESSFUL CROSSING!
 
-                    Excellent work, traveller!
+def get_bridge_success():
+    return f"""🎉 THE ANCIENT BRIDGE – SUCCESSFUL CROSSING!
+
+                    Excellent work,  {PLAYER_STATE["player_name"]}!
 
                     You successfully secured the rope and operated the ancient mechanism.
 
@@ -211,13 +236,15 @@ BRIDGE_SUCCESS = """🎉 THE ANCIENT BRIDGE – SUCCESSFUL CROSSING!
 
                     Well done! Your patience and problem-solving skills have helped you overcome another obstacle.
 
-                    Remember, traveller: Sometimes survival requires more than strength; it requires intelligence and resourcefulness.
+                    Remember,  {PLAYER_STATE["player_name"]}: Sometimes survival requires more than strength; it requires intelligence and resourcefulness.
 
                     Your adventure continues..."""
 
-LIGHT_HOUSE_WELCOME = """🏚️ PHASE IV: THE ABANDONED LIGHTHOUSE Chapter 4: The Key to Survival
 
-                        Congratulations, traveller! You have successfully crossed the ancient bridge!
+def get_light_house_welcome():
+    return f"""🏚️ PHASE IV: THE ABANDONED LIGHTHOUSE Chapter 4: The Key to Survival
+
+                        Congratulations,  {PLAYER_STATE["player_name"]}! You have successfully crossed the ancient bridge!
                         
                         Following the markings on your map, you continue exploring the island until you discover an old lighthouse standing near the rocky coastline.
                         
@@ -235,11 +262,13 @@ LIGHT_HOUSE_WELCOME = """🏚️ PHASE IV: THE ABANDONED LIGHTHOUSE Chapter 4: T
                         
                         Three choices lie ahead, but not all of them will lead to success.
                         
-                        Remember, traveller: Every decision matters, and one careless move could end your journey.
+                        Remember,  {PLAYER_STATE["player_name"]}: Every decision matters, and one careless move could end your journey.
                         
                         The lighthouse holds the secret to your escape. Are you ready to discover it?"""
 
-FIND_KEY_PUZZLE = """🔑 THE FORGOTTEN KEY – A TEST OF SURVIVAL!
+
+def get_find_key_puzzle():
+    return f"""🔑 THE FORGOTTEN KEY – A TEST OF SURVIVAL!
 
                         As you approach the abandoned lighthouse, something shiny catches your attention in the overgrown grass.
 
@@ -257,11 +286,13 @@ FIND_KEY_PUZZLE = """🔑 THE FORGOTTEN KEY – A TEST OF SURVIVAL!
                         2. The Brittle Relic 
                         3. The Keeper's Fortune
 
-                        Choose wisely, traveller. Your next decision could determine your fate!"""
+                        Choose wisely,  {PLAYER_STATE["player_name"]}. Your next decision could determine your fate!"""
 
-FIND_KEY_SUCCESS = """🔑 THE KEEPER'S FORTUNE – KEY SECURED!
 
-                        Excellent work, traveller!
+def get_find_key_success():
+    return f"""🔑 THE KEEPER'S FORTUNE – KEY SECURED!
+
+                        Excellent work,  {PLAYER_STATE["player_name"]}!
 
                         You carefully inspect the grass and successfully retrieve the old rusted key without disturbing anything dangerous.
 
@@ -273,9 +304,11 @@ FIND_KEY_SUCCESS = """🔑 THE KEEPER'S FORTUNE – KEY SECURED!
 
                         Your journey continues..."""
 
-IGNITE_TORCH_WELCOME = """🔥 PHASE V: THE TORCH OF HOPE Chapter 5: A Light in the Darkness
 
-                            Congratulations, traveller! You have successfully unlocked the lighthouse door and stepped inside.
+def get_ignite_torch_welcome():
+    return f"""🔥 PHASE V: THE TORCH OF HOPE Chapter 5: A Light in the Darkness
+
+                            Congratulations,  {PLAYER_STATE["player_name"]}! You have successfully unlocked the lighthouse door and stepped inside.
 
                             The interior is dark, dusty and covered in cobwebs. As you explore the abandoned room, you discover a wooden stick and an old container of gas.
 
@@ -294,13 +327,15 @@ IGNITE_TORCH_WELCOME = """🔥 PHASE V: THE TORCH OF HOPE Chapter 5: A Light in 
                             Enter each correct answer to progress.
                             Solve all five challenges to successfully ignite your torch.
 
-                            Remember, traveller: The darkness is your enemy, but a little light could bring you closer to freedom.
+                            Remember,  {PLAYER_STATE["player_name"]}: The darkness is your enemy, but a little light could bring you closer to freedom.
 
                             Are you ready to light the way to rescue?"""
 
-IGNITE_TORCH_SUCCESS = """🔥 THE TORCH OF HOPE – SUCCESSFULLY IGNITED!
 
-                            Excellent work, traveller!
+def get_ignite_torch_success():
+    return f"""🔥 THE TORCH OF HOPE – SUCCESSFULLY IGNITED!
+
+                            Excellent work,  {PLAYER_STATE["player_name"]}!
 
                             You successfully assembled the torch and ignited it using the gas.
 
@@ -315,7 +350,10 @@ IGNITE_TORCH_SUCCESS = """🔥 THE TORCH OF HOPE – SUCCESSFULLY IGNITED!
                             You are one step closer to escaping Mystery Island!
 
                             Your final challenge awaits..."""
-JAMMED_DOOR_WELCOME = """🚪 THE JAMMED DOOR – THE FINAL OBSTACLE!
+
+
+def get_jammed_door_welcome():
+    return f"""🚪 THE JAMMED DOOR – THE FINAL OBSTACLE!
 
                             With your torch illuminating the darkness, you explore deeper into the lighthouse and discover an old control room.
 
@@ -342,12 +380,15 @@ JAMMED_DOOR_WELCOME = """🚪 THE JAMMED DOOR – THE FINAL OBSTACLE!
                             LLUP
                             TSALB
 
-                            Choose your actions wisely, traveller! Your final chance of activating the rescue beacon lies beyond this door.
+                            Choose your actions wisely,  {PLAYER_STATE["player_name"]}! Your final chance of activating the rescue beacon lies beyond this door.
 
                             Will you find a way through before time runs out?"""
-JAMMED_DOOR_SUCCESS = """🚪 THE JAMMED DOOR – ACCESS GRANTED!
 
-                            Excellent work, traveller!
+
+def get_jammed_door_success():
+    return f"""🚪 THE JAMMED DOOR – ACCESS GRANTED!
+
+                            Excellent work,  {PLAYER_STATE["player_name"]}!
 
                             You successfully identified the correct action and pushed against the massive rusted door.
 
@@ -365,9 +406,11 @@ JAMMED_DOOR_SUCCESS = """🚪 THE JAMMED DOOR – ACCESS GRANTED!
 
                             Will you finally make it home?"""
 
-RESCUE_BEACON_WELCOME = """🚨 THE FINAL BEACON – THE LAST HOPE! Chapter 6: A Signal for Survival
 
-                            Congratulations, traveller! You have successfully opened the control-room door!
+def get_rescue_beacon_welcome():
+    return f"""🚨 THE FINAL BEACON – THE LAST HOPE! Chapter 6: A Signal for Survival
+
+                            Congratulations,  {PLAYER_STATE["player_name"]}! You have successfully opened the control-room door!
 
                             As you step inside, you discover an ancient rescue beacon covered in dust and surrounded by rusty electrical equipment.
 
@@ -383,42 +426,44 @@ RESCUE_BEACON_WELCOME = """🚨 THE FINAL BEACON – THE LAST HOPE! Chapter 6: A
 
                             Press ENTER to activate the lighthouse beacon and send a rescue signal across the ocean.
 
-                            Take a deep breath, traveller. This is the moment you have been waiting for!
+                            Take a deep breath,  {PLAYER_STATE["player_name"]}. This is the moment you have been waiting for!
 
                             Will your signal reach the outside world?
 
                             Press ENTER to call for rescue!"""
 
-RESCUE_BEACON_SUCCESS = """🚨 THE FINAL BEACON – RESCUE SUCCESSFUL!
 
-                            CONGRATULATIONS, TRAVELLER!
-                            
+def get_rescue_beacon_success():
+    return f"""🚨 THE FINAL BEACON – RESCUE SUCCESSFUL!
+
+                            CONGRATULATIONS,  {PLAYER_STATE["player_name"]}!
+
                             You press ENTER, and suddenly the ancient lighthouse beacon roars back to life!
-                            
+
                             A powerful beam of light cuts through the darkness, sweeping across the vast ocean.
-                            
+
                             You watch anxiously as the signal travels across the waves.
-                            
+
                             Moments later, you hear a distant sound growing louder.
-                            
+
                             WHIRRRRRR... WHIRRRRRR...
-                            
+
                             A rescue helicopter appears above the island! Its searchlight scans the coastline before finally spotting you standing beside the lighthouse.
-                            
+
                             The helicopter lowers its rescue team, who quickly help you aboard.
-                            
+
                             After everything you have endured, you are finally safe!
-                            
+
                             🚁 RESCUE CONFIRMED!
-                            
+
                             You survived the storm, explored the jungle, defeated the beast, crossed the ancient bridge and uncovered the secrets of the lighthouse.
-                            
+
                             Your courage, intelligence and determination have paid off.
-                            
+
                             🏆 MISSION COMPLETED!
-                            
+
                             🎉 YOU HAVE SUCCESSFULLY ESCAPED MYSTERY ISLAND!
-                            
+
                             Thank you for playing!
-                            
+
                             THE END."""
