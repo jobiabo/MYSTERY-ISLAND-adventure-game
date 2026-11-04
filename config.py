@@ -301,17 +301,124 @@ IGNITE_TORCH_WELCOME = """🔥 PHASE V: THE TORCH OF HOPE Chapter 5: A Light in 
 IGNITE_TORCH_SUCCESS = """🔥 THE TORCH OF HOPE – SUCCESSFULLY IGNITED!
 
                             Excellent work, traveller!
-                            
+
                             You successfully assembled the torch and ignited it using the gas.
-                            
+
                             A bright flame bursts to life, illuminating the dark lighthouse interior.
-                            
+
                             As you raise the torch, you notice an old control room with a large emergency light system.
-                            
+
                             Could this be your chance to signal for rescue?
-                            
+
                             🏆 CHALLENGE COMPLETED!
-                            
+
                             You are one step closer to escaping Mystery Island!
-                            
+
                             Your final challenge awaits..."""
+JAMMED_DOOR_WELCOME = """🚪 THE JAMMED DOOR – THE FINAL OBSTACLE!
+
+                            With your torch illuminating the darkness, you explore deeper into the lighthouse and discover an old control room.
+
+                            However, the entrance is blocked by a massive, rusted door. You try to open it, but it refuses to move.
+
+                            There must be another way inside!
+
+                            You examine the door and realise that forcing it open requires the right action.
+
+                            ⚡ YOUR NEXT CHALLENGE: UNSCRAMBLE THE ACTIONS!
+
+                            Three scrambled words will appear on your screen.
+
+                            Instructions:
+
+                            Rearrange each set of scrambled letters to form the correct action.
+                            You have only 5 seconds per word.
+                            Enter each answer before time runs out.
+                            Solve all three words to overcome the challenge.
+
+                            YOUR SCRAMBLED WORDS:
+
+                            HSUP
+                            LLUP
+                            TSALB
+
+                            Choose your actions wisely, traveller! Your final chance of activating the rescue beacon lies beyond this door.
+
+                            Will you find a way through before time runs out?"""
+JAMMED_DOOR_SUCCESS = """🚪 THE JAMMED DOOR – ACCESS GRANTED!
+
+                            Excellent work, traveller!
+
+                            You successfully identified the correct action and pushed against the massive rusted door.
+
+                            CREAAAK!
+
+                            With a loud groan, the door finally gives way and slowly swings open.
+
+                            You step inside the control room and discover an ancient rescue beacon covered in dust.
+
+                            At last, you are one step away from escaping Mystery Island!
+
+                            🏆 CHALLENGE COMPLETED!
+
+                            Your final mission awaits: ACTIVATE THE RESCUE BEACON!
+
+                            Will you finally make it home?"""
+
+RESCUE_BEACON_WELCOME = """🚨 THE FINAL BEACON – THE LAST HOPE! Chapter 6: A Signal for Survival
+
+                            Congratulations, traveller! You have successfully opened the control-room door!
+
+                            As you step inside, you discover an ancient rescue beacon covered in dust and surrounded by rusty electrical equipment.
+
+                            You approach the control panel and notice a large activation button.
+
+                            After everything you have survived, this could be your final chance to escape Mystery Island!
+
+                            ⚡ YOUR FINAL CHALLENGE: ACTIVATE THE RESCUE BEACON!
+
+                            The beacon is ready to be activated.
+
+                            INSTRUCTIONS:
+
+                            Press ENTER to activate the lighthouse beacon and send a rescue signal across the ocean.
+
+                            Take a deep breath, traveller. This is the moment you have been waiting for!
+
+                            Will your signal reach the outside world?
+
+                            Press ENTER to call for rescue!"""
+
+RESCUE_BEACON_SUCCESS = """🚨 THE FINAL BEACON – RESCUE SUCCESSFUL!
+
+                            CONGRATULATIONS, TRAVELLER!
+                            
+                            You press ENTER, and suddenly the ancient lighthouse beacon roars back to life!
+                            
+                            A powerful beam of light cuts through the darkness, sweeping across the vast ocean.
+                            
+                            You watch anxiously as the signal travels across the waves.
+                            
+                            Moments later, you hear a distant sound growing louder.
+                            
+                            WHIRRRRRR... WHIRRRRRR...
+                            
+                            A rescue helicopter appears above the island! Its searchlight scans the coastline before finally spotting you standing beside the lighthouse.
+                            
+                            The helicopter lowers its rescue team, who quickly help you aboard.
+                            
+                            After everything you have endured, you are finally safe!
+                            
+                            🚁 RESCUE CONFIRMED!
+                            
+                            You survived the storm, explored the jungle, defeated the beast, crossed the ancient bridge and uncovered the secrets of the lighthouse.
+                            
+                            Your courage, intelligence and determination have paid off.
+                            
+                            🏆 MISSION COMPLETED!
+                            
+                            🎉 YOU HAVE SUCCESSFULLY ESCAPED MYSTERY ISLAND!
+                            
+                            Thank you for playing!
+                            
+                            THE END."""

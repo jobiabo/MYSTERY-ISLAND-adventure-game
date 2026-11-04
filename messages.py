@@ -391,10 +391,72 @@ def ignite_touch_puzzle(energy_tracker):
 
 
 def jam_door_welcome():
-    pass
+    print(config.JAMMED_DOOR_WELCOME)
 
-def jam_door_action():
-    pass
+    print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
+    print("ENERGY LEVEL BOOSTED!!!")
+
+    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
+
+    energy_tracker = 5
+    
+    while energy_tracker > 0:
+
+        energy_tracker, success = jam_door_action(energy_tracker)
+
+        print(f"ENERGY REMAINING: {energy_tracker}/5")
+
+        # Check if the player succeeded
+        if success:
+            # Next Phase: ACTIVATE RESCUE BEACON
+            activate_rescue_beacon()
+            return
+
+        # Check if the player has run out of energy
+        if energy_tracker <= 0:
+            print("YOU HAVE RUN OUT OF ENERGY!")
+            print("GAME OVER!")
+            return
+
+        # Ask whether the player wants to retry
+        retry = input(
+            "Would you like to try again? (yes/no): ").strip().lower()
+
+        if retry == "yes":
+            print("You gather your strength and try again...")
+            continue
+        
+        elif retry == "no":
+            print("You have chosen to give up.")
+            print("GAME OVER!")
+            return
+
+        else:
+            print("Invalid response! Please enter yes or no.")
+
+
+
+def jam_door_action(energy_tracker):
+    input("PRESS ENTER TO BEGIN YOUR PUZZLE: ")
+    sys_data = ["PUSH", "PULL", "BLAST"]
+    user_data = []
+
+    input_I = input("SUHP: ").strip().upper()
+    user_data.append(input_I)
+    input_II = input("LULP: ").strip().upper()
+    user_data.append(input_II)
+    input_III = input("ASBLT: ").strip().upper()
+    user_data.append(input_III)
+
+    if user_data == sys_data:
+        print(config.JAMMED_DOOR_SUCCESS)
+        return energy_tracker, True
+    else:
+        energy_tracker-=1
+        return energy_tracker, False
 
 def activate_rescue_beacon():
-    pass
+    print(config.RESCUE_BEACON_WELCOME)
+    input("PRESS ENTER TO ACTIVATE THE RESCUE BEACON...")
+    print(config.RESCUE_BEACON_SUCCESS)
