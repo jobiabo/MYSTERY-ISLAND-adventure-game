@@ -56,7 +56,7 @@ def jungle_welcome():
 
         # Check if the player succeeded
         if success:
-            # Next Phase
+            # Next Phase: PREDATOR ENCOUNTER
             predator_trial_welcome()
             return
 
@@ -102,10 +102,58 @@ def jungle_path_selection(energy_tracker):
 
 def hollow_embrace():
     return config.HOLLOW_EMBRACE
+
+
  
 def predator_trial_welcome():
     print(config.PREDATOR_WELCOME)
+    print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
+    print("ENERGY LEVEL BOOSTED!!!")
+
+    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
+
+    energy_tracker = 5
+    
+    while energy_tracker > 0:
+
+        energy_tracker, success = predator_engage(energy_tracker)
+
+        print(f"ENERGY REMAINING: {energy_tracker}/5")
+
+        # Check if the player succeeded
+        if success:
+            # Next Phase: OLD BRIDGE WELCOME
+            old_bridge_welcome()
+            return
+
+        # Check if the player has run out of energy
+        if energy_tracker <= 0:
+            print("YOU HAVE RUN OUT OF ENERGY!")
+            print("GAME OVER!")
+            return
+
+        # Ask whether the player wants to retry
+        retry = input(
+            "Would you like to try again? (yes/no): ").strip().lower()
+
+        if retry == "yes":
+            print("You gather your strength and try again...")
+            continue
+        
+        elif retry == "no":
+            print("You have chosen to give up.")
+            print("GAME OVER!")
+            return
+
+        else:
+            print("Invalid response! Please enter yes or no.")
+    
+
+def predator_engage(energy_tracker):
     print("PRESS ENTER TO ENGAGE: ")
+    sys_dodge = ["DODGE", "MOVE"]
+    sys_attack = ["ATTACK", "STRIKE", "SLASH"]
     _dodged = []
     _attack = []
     print("""The beast launches a powerful strike towards you!
@@ -116,17 +164,34 @@ def predator_trial_welcome():
     userinput2 = input("VOME: ").strip().upper()
     _dodged.append(userinput2)
 
-    print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
-    userinput3 = input("TATKAC: ").strip().upper()
-    _attack.append(userinput3)
-    userinput4 = input("KICSTRE: ").strip().upper()
-    _attack.append(userinput4)
-    userinput5 = input("ASHLS: ").strip().upper()
-    _attack.append(userinput5)
 
     print(_dodged)
     print(_attack)
-    
+
+    if _dodged == sys_dodge:
+        print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
+        userinput3 = input("TATKAC: ").strip().upper()
+        _attack.append(userinput3)
+        userinput4 = input("KICSTRE: ").strip().upper()
+        _attack.append(userinput4)
+        userinput5 = input("ASHLS: ").strip().upper()
+        _attack.append(userinput5)
+
+        if _attack == sys_attack:
+            print("YOU HAVE CONQUERED THE BEAST SUCCESSFULLY")
+            input("PRESS ENTER TO PICK UP AN INVENTORY: ")
+            print("YOU HAVE SUCCESSFULLY PICKED UP A ROPE")
+            return energy_tracker, True
+        elif _attack != sys_attack:
+            print("You couldn't strike the beast")
+            print("You missed and a word")
+            energy_tracker-=1
+            return energy_tracker, False
+    else:
+        print("You couldn't unscrambled the word")
+        print("You are hit")
+        energy_tracker-=1
+        return energy_tracker, False
 
 
 def old_bridge_welcome():

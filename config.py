@@ -165,3 +165,5 @@ PREDATOR_WELCOME = """THE PREDATOR'S TRIAL: FACE THE BEAST!
                     Remember, traveller: Think fast, act wisely and fight for your survival!
                     
                     The predator is watching. Are you ready?"""
+
+OLD_BRIDGE_WELCOME = ""
