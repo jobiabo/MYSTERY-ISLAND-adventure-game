@@ -195,10 +195,68 @@ def predator_engage(energy_tracker):
 
 
 def old_bridge_welcome():
-    pass
+    print(config.OLD_BRIDGE_WELCOME)
+    print(input("PRESS ENTER TO BOOST YOUR ENERGY: "))
+    print("ENERGY LEVEL BOOSTED!!!")
 
-def old_bridge_puzzle():
-    pass
+    print(f"Health: {config.PLAYER_STATE["health"]}")
+    print(input("PRESS ENTER TO CONTINUE TO THE NEXT LEVEL: "))
+
+    energy_tracker = 5
+    
+    while energy_tracker > 0:
+
+        energy_tracker, success = old_bridge_puzzle(energy_tracker)
+
+        print(f"ENERGY REMAINING: {energy_tracker}/5")
+
+        # Check if the player succeeded
+        if success:
+            # Next Phase: LIGHT HOUSE WELCOME 
+            lighthouse_welcome()
+            return
+
+        # Check if the player has run out of energy
+        if energy_tracker <= 0:
+            print("YOU HAVE RUN OUT OF ENERGY!")
+            print("GAME OVER!")
+            return
+
+        # Ask whether the player wants to retry
+        retry = input(
+            "Would you like to try again? (yes/no): ").strip().lower()
+
+        if retry == "yes":
+            print("You gather your strength and try again...")
+            continue
+        
+        elif retry == "no":
+            print("You have chosen to give up.")
+            print("GAME OVER!")
+            return
+
+        else:
+            print("Invalid response! Please enter yes or no.")
+
+def old_bridge_puzzle(energy_tracker):
+    print("UNSCRAMBLED WORDS TO REMOVE ROPE AND SET THE BRIDGE")
+    sys_list = ["ROPE", "PULL", "PLACE"]
+    user_list = []
+    userinput1 = input("EOPR: ").strip().upper()
+    user_list.append(userinput1)
+    userinput2 = input("LUPL: ").strip().upper()
+    user_list.append(userinput2)
+    userinput3 = input("ACPLE: ").strip().upper()
+    user_list.append(userinput3)
+
+    if user_list == sys_list:
+        print(config.BRIDGE_SUCCESS)
+        return energy_tracker, True
+    else:
+        energy_tracker-=1
+        return energy_tracker, False
+    
+
 
 def lighthouse_welcome():
     pass

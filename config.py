@@ -166,4 +166,51 @@ PREDATOR_WELCOME = """THE PREDATOR'S TRIAL: FACE THE BEAST!
                     
                     The predator is watching. Are you ready?"""
 
-OLD_BRIDGE_WELCOME = ""
+OLD_BRIDGE_WELCOME = """🌉 PHASE III: THE ANCIENT BRIDGE Chapter 3: The Forgotten Crossing
+
+                        Congratulations, traveller! You have defeated the beast and secured the rope!
+                        
+                        Following the route marked on your map, you venture deeper into the island until you encounter an enormous ancient bridge.
+                        
+                        The bridge looks extremely old, with broken wooden planks and a rusted mechanical wheel. It appears to have been abandoned for millions of years.
+                        
+                        There is no other way across.
+                        
+                        As you examine the bridge, you notice that its mechanism is still connected to a large wheel. Your rope might be the only thing capable of bringing it back to life.
+                        
+                        YOUR NEXT CHALLENGE: RESTORE THE BRIDGE!
+                        
+                        You must use your rope to secure the wheel and operate the ancient mechanism.
+                        
+                        Instructions:
+                        
+                        Three scrambled words will appear on your screen.
+                        Rearrange the letters to form the correct words.
+                        Each correct answer helps you operate the bridge mechanism.
+                        Solve all three challenges to lower the bridge and continue your journey.
+                        
+                        Be careful, traveller! One wrong move could leave you stranded.
+                        
+                        The ancient bridge awaits. Are you ready to cross?"""
+
+BRIDGE_SUCCESS = """🎉 THE ANCIENT BRIDGE – SUCCESSFUL CROSSING!
+
+                    Excellent work, traveller!
+                    
+                    You successfully secured the rope and operated the ancient mechanism.
+                    
+                    With a loud creaking sound, the rusted wheel begins to turn, and the ancient bridge slowly lowers into position.
+                    
+                    At last, the path across is clear!
+                    
+                    You carefully cross the bridge and continue your journey deeper into the mysterious island.
+                    
+                    🏆 CHALLENGE COMPLETED!
+                    
+                    ⚠️ SURVIVAL FEEDBACK
+                    
+                    Well done! Your patience and problem-solving skills have helped you overcome another obstacle.
+                    
+                    Remember, traveller: Sometimes survival requires more than strength; it requires intelligence and resourcefulness.
+                    
+                    Your adventure continues..."""
