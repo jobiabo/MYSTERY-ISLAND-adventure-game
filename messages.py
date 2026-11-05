@@ -174,7 +174,7 @@ def predator_engage(energy_tracker):
         print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
         userinput3 = input("TATKAC: ").strip().upper()
         _attack.append(userinput3)
-        userinput4 = input("KICSTRE: ").strip().upper()
+        userinput4 = input("KISTRE: ").strip().upper()
         _attack.append(userinput4)
         userinput5 = input("ASHLS: ").strip().upper()
         _attack.append(userinput5)
