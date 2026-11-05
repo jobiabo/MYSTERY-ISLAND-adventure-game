@@ -11,6 +11,8 @@ def main():
                 choice = input("Would you like to play again? (yes/no): ").strip().lower()
                 if choice == "yes":
                     continue
+            print("Game Ending...")
+            print("See you soon...")
             return
                 
         except:

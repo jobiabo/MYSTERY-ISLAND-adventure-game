@@ -10,7 +10,7 @@ def start_game():
         if not player_signup():
             print("Please provide a username")
             continue
-        game_progress()
+        return game_progress()
 
 
 def game_progress():
