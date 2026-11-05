@@ -13,8 +13,13 @@ def get_player_health():
     return PLAYER_STATE["health"]
 
 def player_signup():
-    PLAYER_STATE["player_name"] = input("Enter your Nick name: ").strip().lower()
+    userdata = input("Enter your Nick name: ").strip().lower()
 
+    if not userdata:
+        return False
+
+    PLAYER_STATE["player_name"] = userdata
+    return True
 
 def get_main_menu():
     return f"""
