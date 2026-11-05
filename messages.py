@@ -1,5 +1,6 @@
 from effects import typewriter
 from config import get_main_menu, get_start_message, get_the_lost_map, get_phase_jungle, get_player_health, get_predator_welcome, get_hollow_embrace, get_old_bridge_welcome, get_bridge_success, get_light_house_welcome, get_find_key_puzzle, get_find_key_success, get_ignite_torch_welcome, get_ignite_torch_success, get_jammed_door_welcome, get_jammed_door_success, get_rescue_beacon_welcome, get_rescue_beacon_success, PLAYER_STATE
+import sys
 def main_menu(): 
     return typewriter(get_main_menu())
 
@@ -76,7 +77,7 @@ def jungle_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -98,6 +99,9 @@ def jungle_path_selection(energy_tracker):
             return energy_tracker, False
         elif choice == "2" or choice == "right" or choice == "the Predator's trial":
             return energy_tracker, True
+        else:
+            print("Enter valid response (1/2): ")
+            continue
 
 def hollow_embrace():
     return get_hollow_embrace()
@@ -143,7 +147,7 @@ def predator_trial_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -232,7 +236,7 @@ def old_bridge_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -296,7 +300,7 @@ def lighthouse_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -360,7 +364,7 @@ def ignite_torch_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -429,7 +433,7 @@ def jam_door_welcome():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")

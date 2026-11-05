@@ -1,6 +1,7 @@
 from messages import get_main_menu, find_map, jungle_welcome
 from config import get_game_intro, get_start_message, player_signup
 from effects import typewriter
+import sys
 
 def start_game():
     while True:
@@ -57,7 +58,7 @@ def game_progress():
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
-            return
+            sys.exit()
 
         else:
             print("Invalid response! Please enter yes or no.")
@@ -66,15 +67,15 @@ def decide_replay(choice, message):
     while True:
         try:
             if choice == "yes":
-                return True
+                return "yes", True
 
             elif choice == "no":
-                return False
+                return "no", False
 
             print("Invalid response! Please enter yes or no.")
             choice = input(f"{message} (yes/no): ").strip().lower()
             continue
         except KeyboardInterrupt:
-            print("You forcefully ended the game...")
-            return
+            err_message = "You forcefully ended the game..."
+            return err_message, False
 
