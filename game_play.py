@@ -3,13 +3,16 @@ from config import get_game_intro, get_start_message, player_signup
 from effects import typewriter
 
 def start_game():
-    print(get_main_menu())
-        
-    input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
-    player_signup()
-    print("\n")
+    while True:
+        print(get_main_menu())
+
+        input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
+        if not player_signup():
+            continue
+        game_progress()
 
 
+def game_progress():
     typewriter(get_start_message())
     input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
     typewriter(get_game_intro())
@@ -21,7 +24,7 @@ def start_game():
     energy_tracker = 5
 
     while energy_tracker > 0:
-
+    
         energy_tracker, success = find_map(energy_tracker)
         from config import PLAYER_STATE
         PLAYER_STATE["health"] = energy_tracker
@@ -49,7 +52,7 @@ def start_game():
         if retry == "yes":
             print("You gather your strength and try again...")
             continue
-
+        
         elif retry == "no":
             print("You have chosen to give up.")
             print("GAME OVER!")
@@ -58,4 +61,4 @@ def start_game():
         else:
             print("Invalid response! Please enter yes or no.")
             return
-    
+                
