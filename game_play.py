@@ -8,6 +8,7 @@ def start_game():
 
         input("PRESS ENTER OR ANY KEY TO CONTINUE: ")
         if not player_signup():
+            print("Please provide a username")
             continue
         game_progress()
 

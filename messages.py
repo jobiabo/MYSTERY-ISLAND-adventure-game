@@ -1,5 +1,5 @@
 from effects import typewriter
-from config import get_main_menu, get_start_message, get_the_lost_map, get_phase_jungle, get_player_health, get_predator_welcome, get_hollow_embrace, get_old_bridge_welcome, get_bridge_success, get_light_house_welcome, get_find_key_puzzle, get_find_key_success, get_ignite_torch_welcome, get_ignite_torch_success, get_jammed_door_welcome, get_jammed_door_success, get_rescue_beacon_welcome, get_rescue_beacon_success
+from config import get_main_menu, get_start_message, get_the_lost_map, get_phase_jungle, get_player_health, get_predator_welcome, get_hollow_embrace, get_old_bridge_welcome, get_bridge_success, get_light_house_welcome, get_find_key_puzzle, get_find_key_success, get_ignite_torch_welcome, get_ignite_torch_success, get_jammed_door_welcome, get_jammed_door_success, get_rescue_beacon_welcome, get_rescue_beacon_success, PLAYER_STATE
 def main_menu(): 
     return typewriter(get_main_menu())
 
@@ -459,3 +459,6 @@ def activate_rescue_beacon():
     print(get_rescue_beacon_welcome())
     input("PRESS ENTER TO ACTIVATE THE RESCUE BEACON...")
     print(get_rescue_beacon_success())
+    PLAYER_STATE["game_progress"] = "completed"
+    return
+    

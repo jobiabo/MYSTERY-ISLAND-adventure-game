@@ -1,5 +1,5 @@
 from game_play import start_game
-import sys
+from config import PLAYER_STATE
 
 
 
@@ -7,6 +7,12 @@ def main():
     while True:
         try:
             start_game()
+            if PLAYER_STATE["game_progress"] == "completed":
+                choice = input("Would you like to play again? (yes/no): ").strip().lower()
+                if choice == "yes":
+                    continue
+            return
+                
         except:
             KeyboardInterrupt
             print("Do you want to quit?")
