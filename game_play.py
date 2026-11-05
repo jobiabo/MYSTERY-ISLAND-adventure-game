@@ -62,4 +62,19 @@ def game_progress():
         else:
             print("Invalid response! Please enter yes or no.")
             return
-                
+def decide_replay(choice, message):
+    while True:
+        try:
+            if choice == "yes":
+                return True
+
+            elif choice == "no":
+                return False
+
+            print("Invalid response! Please enter yes or no.")
+            choice = input(f"{message} (yes/no): ").strip().lower()
+            continue
+        except KeyboardInterrupt:
+            print("You forcefully ended the game...")
+            return
+
