@@ -6,7 +6,8 @@ PLAYER_STATE = {
     "puzzle_solved": False,
     "has_rope": False,
     "has_lantern": False,
-    "highest_score": 0
+    "highest_score": 0,
+    "game_progress": "not completed"
 }
 
 def get_player_health():
