@@ -94,7 +94,7 @@ def jungle_path_selection(energy_tracker):
     while True:
         choice = input("Choose path: ").strip().lower()
         if choice == "1" or choice == "left" or choice == "hollow embrace":
-            hollow_embrace()
+            print(hollow_embrace())
             energy_tracker -= 1
             return energy_tracker, False
         elif choice == "2" or choice == "right" or choice == "the Predator's trial":
@@ -175,7 +175,7 @@ def predator_engage(energy_tracker):
         print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
         userinput3 = input("TATKAC: ").strip().upper()
         _attack.append(userinput3)
-        userinput4 = input("KICSTRE: ").strip().upper()
+        userinput4 = input("KISTRE: ").strip().upper()
         _attack.append(userinput4)
         userinput5 = input("ASHLS: ").strip().upper()
         _attack.append(userinput5)
@@ -187,7 +187,8 @@ def predator_engage(energy_tracker):
             return energy_tracker, True
         elif _attack != sys_attack:
             print("You couldn't strike the beast")
-            print("You missed and a word")
+            print("You missed a word")
+            print("And the beast devoured you")
             energy_tracker-=1
             return energy_tracker, False
     else:
@@ -256,6 +257,8 @@ def old_bridge_puzzle(energy_tracker):
         print(get_bridge_success())
         return energy_tracker, True
     else:
+        print("Puzzled failed")
+        print("Bridge was not placed successfully")
         energy_tracker-=1
         return energy_tracker, False
     
@@ -388,9 +391,10 @@ def ignite_touch_puzzle(energy_tracker):
     if user_data == sys_data:
         print(get_ignite_torch_success())
         return energy_tracker, True
-    else:
-        energy_tracker-=1
-        return energy_tracker, False
+    
+    print("Puzzle failed! Your attempt to ignite the torch was unsuccessful.")
+    energy_tracker-=1
+    return energy_tracker, False
 
 
 def jam_door_welcome():
@@ -455,9 +459,10 @@ def jam_door_action(energy_tracker):
     if user_data == sys_data:
         print(get_jammed_door_success())
         return energy_tracker, True
-    else:
-        energy_tracker-=1
-        return energy_tracker, False
+
+    print("Puzzle failed! Your attempt to get through the door was unsuccessful.")
+    energy_tracker-=1
+    return energy_tracker, False
 
 def activate_rescue_beacon():
     print(get_rescue_beacon_welcome())
