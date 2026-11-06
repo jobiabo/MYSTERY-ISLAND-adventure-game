@@ -141,7 +141,7 @@ Draft, to be rewritten in my own words before submitting: "The concept I underst
 ## 6. Submission checklist
  
 - Repository URL: [https://github.com/jobiabo/MYSTERY-ISLAND-adventure-game]
-- Final commit SHA: [add]
+- Final commit SHA: [5b535934ad534b79a9b35a1439b96fcdc99121aa]
 - Python version: [add; the __pycache__ in my project shows 3.12]
 - How to run: `python3 main.py`
 - Test command: `python -m unittest discover -s tests -v` (cannot run until the tests folder exists)
