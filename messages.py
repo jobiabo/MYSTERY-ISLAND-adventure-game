@@ -97,7 +97,7 @@ def jungle_path_selection(energy_tracker):
             print(hollow_embrace())
             energy_tracker -= 1
             return energy_tracker, False
-        elif choice == "2" or choice == "right" or choice == "the Predator's trial":
+        elif choice == "2" or choice == "right" or choice == "the predator's trial":
             return energy_tracker, True
         else:
             print("Enter valid response (1/2): ")
