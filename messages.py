@@ -55,9 +55,7 @@ def find_map(energy_tracker):
             return energy_tracker, True
 
         else:
-            print("Invalid option! Please try again.")
-            energy_tracker -= 1
-            return energy_tracker, False
+            print("Invalid option! Please enter 1, 2 or 3.")
         
 
 
@@ -106,7 +104,7 @@ def jungle_path_selection(energy_tracker):
     while True:
         choice = input("Choose path: ").strip().lower()
         if choice == "1" or choice == "left" or choice == "hollow embrace":
-            hollow_embrace()
+            print(hollow_embrace())
             energy_tracker -= 1
             return energy_tracker, False
         elif choice == "2" or choice == "right" or choice == "the Predator's trial":
@@ -174,7 +172,7 @@ def predator_engage(energy_tracker):
         print("ARRANGE 3 SCRAMBLED WORDS TO ATTACK")
         userinput3 = input("TATKAC: ").strip().upper()
         _attack.append(userinput3)
-        userinput4 = input("KISTRE: ").strip().upper()
+        userinput4 = input("KSTIRE: ").strip().upper()
         _attack.append(userinput4)
         userinput5 = input("ASHLS: ").strip().upper()
         _attack.append(userinput5)
@@ -283,21 +281,24 @@ def lighthouse_welcome():
 
 def find_key(energy_tracker):
     print(get_find_key_puzzle())
-    userinput = input("Enter choice here: ").strip().lower()
-    if userinput == "1" or userinput == "the silent guardian":
-        energy_tracker -= 1
-        return energy_tracker, False
-    elif userinput == "2" or userinput == "the brittle relic":
-        energy_tracker -= 1
-        return energy_tracker, False
 
-    elif userinput == "3" or userinput == "the keeper's fortune":
-        print(get_find_key_success())
-        return energy_tracker, True
-    else:
-        print("invalid input enter option 1 or 2 or 3")
-        energy_tracker -= 1
-        return energy_tracker, False
+    while True:
+        userinput = input("Enter choice here: ").strip().lower()
+
+        if userinput == "1" or userinput == "the silent guardian":
+            energy_tracker -= 1
+            return energy_tracker, False
+
+        elif userinput == "2" or userinput == "the brittle relic":
+            energy_tracker -= 1
+            return energy_tracker, False
+
+        elif userinput == "3" or userinput == "the keeper's fortune":
+            print(get_find_key_success())
+            return energy_tracker, True
+
+        else:
+            print("Invalid input! Please enter option 1, 2 or 3.")
 
 def ignite_torch_welcome():
     print(get_ignite_torch_welcome())

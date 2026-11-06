@@ -1,8 +1,10 @@
 from messages import get_main_menu, find_map, jungle_welcome, ask_retry, move_to
-from config import get_game_intro, get_start_message, player_signup
+from config import get_game_intro, get_start_message, player_signup, reset_player_state
 from effects import typewriter
 
 def start_game():
+    reset_player_state()
+
     while True:
         print(get_main_menu())
 

@@ -6,15 +6,30 @@ PLAYER_STATE = {
     "puzzle_solved": False,
     "has_rope": False,
     "has_lantern": False,
-    "highest_score": 0
+    "highest_score": 0,
+    "game_progress": "not completed"
 }
+
+def reset_player_state():
+    PLAYER_STATE["health"] = 5
+    PLAYER_STATE["has_map"] = False
+    PLAYER_STATE["current_location"] = "beach"
+    PLAYER_STATE["puzzle_solved"] = False
+    PLAYER_STATE["has_rope"] = False
+    PLAYER_STATE["has_lantern"] = False
+    PLAYER_STATE["game_progress"] = "not completed"
 
 def get_player_health():
     return PLAYER_STATE["health"]
 
 def player_signup():
-    PLAYER_STATE["player_name"] = input("Enter your Nick name: ").strip().lower()
+    userdata = input("Enter your Nick name: ").strip().lower()
 
+    if not userdata:
+        return False
+
+    PLAYER_STATE["player_name"] = userdata
+    return True
 
 def get_main_menu():
     return f"""
